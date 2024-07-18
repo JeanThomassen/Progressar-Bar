@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141a31;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.card {
+    width: 290px;
+    height: 350px;
+    background: linear-gradient(#2a1bb6, #141a31);
+    border-radius: 1em;
+    color: #eeffff;
+    box-shadow: 0 5px 10px rgba(0 0 0 / 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, sans-serif;
+}
+
+.circle-background {
+    fill: #242a4d;
+}
+
+.circle-progress {
+    fill: #141a31;
+    stroke: #7e99f2;
+    stroke-width: .4rem;
+    stroke-dasharray: 565.5;
+    stroke-dashoffset: 565.5;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    animation: progress 2s ease-in-out forwards;
+}
+
+.circle-text {
+    fill: #eeffff;
+    font-size: 4rem;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+@keyframes progress {
+    from { stroke-dashoffset: 565.5; }
+    to { stroke-dashoffset: 81; }
+}
